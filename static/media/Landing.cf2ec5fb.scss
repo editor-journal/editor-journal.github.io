@@ -1,0 +1,40 @@
+@import "../app/mixin";
+@import "../app/var";
+
+.toolbar {
+    border-radius: 50%;
+    color: $black;
+    background: $white;
+    width: 2vw;
+    display: inline-block;
+    text-align: center;
+    padding: 2vw;
+    font-size: 2vw;
+    &:hover,
+    &:focus,
+    &.active {
+        background-color: $dark-gray;
+        color: $white;
+        transition: all .25s ease-out;
+    }
+    &.active {
+        transform: scale(0.97) rotate(45deg);
+    }
+
+    @include breakpoint(small) {
+        font-size: 1rem;
+        padding: 10px;
+        width: 21px;
+    }
+    &-container {
+        position: fixed;
+        top: 1.5vw;
+        left: 1.5vw;
+        z-index: 4;
+    }
+}
+
+.editor-container {
+    position: relative;
+    z-index: 1;
+}

@@ -1,0 +1,53 @@
+// Color
+$dark-gray: #9a9a9a;
+
+// Border gutter shared properties
+@mixin border-base {
+    background-color: $dark-gray;   
+    position: fixed;
+    opacity: 0.2;
+    z-index: 3;
+}
+
+.border {
+    &-top {
+        height: 6vw;
+        width: calc(100% - 12vw);
+        opacity: 0.2;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: 6vw;
+        z-index: 3;
+    }
+    &-left {
+        height: 100%;
+        width: 6vw;
+        opacity: 0.2;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+    &-right{
+        height: 100%;
+        width: 6vw;
+        opacity: 0.2;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 3;
+    }
+    &-bottom {
+        height: 6vw;
+        width: calc(100% - 12vw);
+        opacity: 0.2;
+        background-color: #000;
+        position: fixed;
+        bottom: 0;
+        left: 6vw;
+        z-index: 3;
+    }
+}

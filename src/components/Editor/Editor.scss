@@ -1,0 +1,12 @@
+@import "../../app/var";
+
+// Override Draft JS default style
+.DraftEditor-editorContainer {
+    cursor: cell;
+    caret-color: $red;
+    & span {
+    background-color: $white;
+    color: $black;
+    line-height: 1.5;
+    }
+}

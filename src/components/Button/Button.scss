@@ -1,0 +1,32 @@
+@import "../../app/mixin";
+@import "../../app/var";
+
+.button {
+    &-item {
+        display: inline;
+        list-style: none;
+        padding: 0 2vw;
+        &:hover,
+        &:focus {
+            color: $red;
+            opacity: 0.8;
+            transition: opacity .25s ease-out;
+        }
+        @include breakpoint(small) {
+            position: fixed;
+            width: 3rem;
+            left: -1vw;
+            top: 6rem;
+            transform: rotate(-90deg);
+            &:nth-of-type(2)  {
+                top: 10rem;
+            }
+            &:nth-of-type(3)  {
+                top: 15rem;
+            }
+            &:nth-of-type(4)  {
+                top: 21rem;
+            }
+        }
+    }
+}

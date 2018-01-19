@@ -1,0 +1,80 @@
+@import "../../app/mixin";
+@import "../../app/var";
+
+// Measurements
+$long-end: 6vw;
+$short-end: 3vw;
+$height: 1px;
+
+// Frame shared properties
+@mixin frame-base {
+    background-color: $dark-gray;   
+    pointer-events: none;
+    position: fixed;
+    z-index: 1;
+}
+
+// Sides
+@include breakpoint(medium) {
+.frame {
+    // |-
+    &-top-left {
+        @include frame-base();
+        width: $short-end;
+        height: $height;
+        left: $long-end;
+        top: $long-end;
+    }
+     &-left-top {
+        @include frame-base();
+        height: $short-end;
+        left: $long-end;
+        top: $long-end;
+        width: $height;
+    }
+    // -|
+    &-top-right {
+        @include frame-base();
+        height: $height;
+        right: $long-end;
+        top: $long-end;
+        width: $short-end;        
+    }
+    &-right-top {
+        @include frame-base();
+        height: $short-end;
+        right: $long-end;
+        top: $long-end;
+        width: $height;
+    }
+    // _| 
+    &-left-bottom {
+        @include frame-base();
+        bottom: $long-end;
+        height: $short-end;
+        left: $long-end;
+        width: $height;
+    }
+    &-bottom-left {
+        @include frame-base();
+        bottom: $long-end;
+        height: $height;
+        left: $long-end;
+        width: $short-end;
+    }
+    &-right-bottom {
+        @include frame-base();        
+        bottom: $long-end;
+        height: $short-end;
+        right: $long-end;
+        width: $height
+    }
+    &-bottom-right {
+        @include frame-base();        
+        bottom: $long-end;
+        height: $height;
+        right: $long-end;
+        width: $short-end;
+    }
+}
+}
